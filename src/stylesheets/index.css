@@ -1,0 +1,41 @@
+html, body {
+  margin: 0;
+}
+
+a, p, h1, h2, h3, h4, h5, h6, input, label, button{
+  font-family: calibri, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header {
+  width: 100%;
+  height: 6em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+header a {
+  color: #497bb7;
+  padding: 1em;
+  font-size: 1.5em;
+}
+
+header a:active {
+  color: #003364;
+}
+
+header a.currentPage {
+  font-weight: bold;
+}
+
+.app{
+  width: 80%;
+  margin: auto;
+  align-items: center;
+}

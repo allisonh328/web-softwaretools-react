@@ -1,0 +1,53 @@
+.addPage form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto;
+    max-width: 40em;
+}
+
+.addPage form label{
+    margin: 1em .5em .25em .5em;
+    font-size: 1.2em;
+}
+
+.addPage form input{
+    height: 1.5em;
+    padding: .25em 1em;
+    margin: .5em;
+    border: 1px solid #6f6f6f;
+    border-radius: .5em;
+    font-size: 1.2em;
+}
+
+.addPage form input[type=submit]{
+    padding: .5em;
+    height: 3em;
+    display: block;
+    background-color: #cddff5;
+    color: #003364;
+    cursor: pointer;
+}
+
+.addPage form input:focus,
+.addPage form input:hover{
+    outline: none;
+    box-shadow: #cddff5 0 0 .2em;
+}
+
+.addPage p.message {
+    margin: auto;
+    width: 30em;
+    text-align: center;
+    padding: 2em;
+}
+
+.addPage p.success {
+    background: #cdf5cd;
+    color: darkgreen;
+}
+
+.addPage p.error {
+    background: #f5cdcd;
+    color: #640000;
+}

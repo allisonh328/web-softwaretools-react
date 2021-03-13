@@ -1,24 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Redirect, Route, NavLink } from 'react-router-dom';
+import AddPage from "./components/AddPage";
+import ViewPage from "./components/ViewPage";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <Router>
+      <header>
+        <NavLink activeClassName="currentPage" to="/view">View pets</NavLink>
+        <NavLink activeClassName="currentPage" to="/add">Add pet</NavLink>
       </header>
-    </div>
+      <div className="app">
+        <Route
+          path="/view"
+          exact
+          component={ViewPage}
+        />
+        <Route
+          path="/add"
+          exact
+          component={AddPage}
+        />
+        <Route
+          path="*"
+          render={() => <Redirect to="/view"/>}
+        />
+      </div>
+    </Router>
   );
 }
 
